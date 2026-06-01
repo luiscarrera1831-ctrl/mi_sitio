@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>pagina3</title>
+<style> 
+    h1{
+text-align: center;
+}
+ p{
+text-align: center;
+}
+img{
+display: block;
+margin: auto;
+}
+ h2{
+text-align: center;
+}
+ h1{color:green;}
+</style>
+</head>
+<body>
+
+    <h1>¿por qué Victoria es autista?</h1> 
+
+    <p>porque tambien es down</p>
+     
+     <section>
+<img src = "imagenes/drogas.jpg"/>
+</section>
+ <br>
+    <a href="pagina.html">Volver al Inicio</a>                                                                                                                                           
+
+</body>
+</html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Información Adicional</title>
-    <style>
+    <title>pagina4</title>
+<style> 
 .boton{
     background-color: #f3f8f3;
     border: none;
@@ -28,9 +28,8 @@ margin: auto;
  h2{
 text-align: center;
 }
- h1{color:purple;}
- h2{color:purple;}
-  p{color:white;}
+ h1{color:black;}
+ p{color:white;}
  body{
     background: linear-gradient(
 135deg,
@@ -42,94 +41,51 @@ height: 100vh
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: rgba(75, 0, 130, 0.5);
+    background-color: rgb(75, 0, 130);
     border-radius: 10px;
     margin-top: 20px;
 }
-.opciones{
-    text-align: center;
-    margin: 20px 0;
-}
-.opcion-btn{
-    background-color: #9370db;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    margin: 5px;
+select{
+    padding: 10px;
+    font-size: 16px;
     border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-}
-.opcion-btn:hover{
-    background-color: #8a2be2;
-}
-.opcion-btn.active{
-    background-color: #4b0082;
-    border: 2px solid white;
-}
-.info-contenido{
-    display: none;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 15px;
-    border-radius: 8px;
-    margin-top: 15px;
-}
-.info-contenido.mostrar{
+    border: none;
+    margin: 10px auto;
     display: block;
+    width: 100%;
+    max-width: 400px;
 }
-    </style>
+#info-container{
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: none;
+}
+</style>
 </head>
 <body>
 
     <div class="contenedor">
-    <h1>Información Adicional</h1> 
+    <h1>Información sobre drogas</h1> 
 
-    <p>Selecciona una opción para ver más información:</p>
+    <p>Selecciona una opción para ver información detallada:</p>
     
-    <div class="opciones">
-        <button class="opcion-btn" onclick="mostrarInfo('tipos')">Tipos de Drogas</button>
-        <button class="opcion-btn" onclick="mostrarInfo('efectos')">Efectos en el Cuerpo</button>
-        <button class="opcion-btn" onclick="mostrarInfo('senales')">Señales de Advertencia</button>
-        <button class="opcion-btn" onclick="mostrarInfo('ayuda')">Recursos de Ayuda</button>
+    <select id="selector" onchange="mostrarInfo()">
+        <option value="">-- Selecciona una opción --</option>
+        <option value="marihuana">Marihuana</option>
+        <option value="cocaina">Cocaína</option>
+        <option value="alcohol">Alcohol</option>
+        <option value="tabaco">Tabaco</option>
+        <option value="prevencion">Prevención</option>
+    </select>
+
+    <div id="info-container">
+        <h2 id="info-titulo"></h2>
+        <p id="info-texto"></p>
+    </div>
     </div>
 
-    <div id="tipos" class="info-contenido">
-        <h2>Tipos de Drogas</h2>
-        <p><strong>Estimulantes:</strong> Cocaína, anfetaminas, metanfetaminas. Aumentan la actividad cerebral y el estado de alerta.</p>
-        <p><strong>Depresores:</strong> Alcohol, benzodiazepinas, barbitúricos. Disminuyen la actividad cerebral y producen relajación.</p>
-        <p><strong>Alucinógenos:</strong> LSD, hongos psilocibios, peyote. Alteran la percepción de la realidad.</p>
-        <p><strong>Opioides:</strong> Heroína, morfina, oxicodona. Alivian el dolor pero son altamente adictivos.</p>
-        <p><strong>Cannabinoides:</strong> Marihuana, hashish. Afectan el estado de ánimo y la percepción.</p>
-    </div>
-
-    <div id="efectos" class="info-contenido">
-        <h2>Efectos en el Cuerpo</h2>
-        <p><strong>Cerebro:</strong> Alteraciones en el juicio, memoria, aprendizaje y coordinación.</p>
-        <p><strong>Corazón:</strong> Aumento de la frecuencia cardíaca, presión arterial y riesgo de ataque cardíaco.</p>
-        <p><strong>Hígado:</strong> Daño hepático, cirrosis y falla hepática.</p>
-        <p><strong>Pulmones:</strong> Daño pulmonar, infecciones respiratorias y cáncer.</p>
-        <p><strong>Sistema Inmunológico:</strong> Debilitamiento de las defensas del cuerpo.</p>
-    </div>
-
-    <div id="senales" class="info-contenido">
-        <h2>Señales de Advertencia</h2>
-        <p><strong>Cambios físicos:</strong> Ojos rojos, pérdida de peso, falta de higiene personal.</p>
-        <p><strong>Cambios de comportamiento:</strong> Aislamiento social, cambios en los hábitos de sueño, irritabilidad.</p>
-        <p><strong>Problemas escolares:</strong> Baja de calificaciones, ausentismo, pérdida de interés en actividades.</p>
-        <p><strong>Problemas financieros:</strong> Pedir dinero prestado frecuentemente, desaparición de objetos de valor.</p>
-        <p><strong>Cambios emocionales:</strong> Depresión, ansiedad, cambios de humor extremos.</p>
-    </div>
-
-    <div id="ayuda" class="info-contenido">
-        <h2>Recursos de Ayuda</h2>
-        <p><strong>Líneas de ayuda:</strong> Existen líneas telefónicas gratuitas y confidenciales 24/7.</p>
-        <p><strong>Grupos de apoyo:</strong> Narcóticos Anónimos, Al-Anon para familias.</p>
-        <p><strong>Tratamiento profesional:</strong> Centros de rehabilitación, terapeutas especializados.</p>
-        <p><strong>Apoyo familiar:</strong> La familia juega un papel crucial en el proceso de recuperación.</p>
-        <p><strong>Educación:</strong> Programas de prevención en escuelas y comunidades.</p>
-    </div>
-    </div>
- <br>
  <div class="contenedor">
     <a href="pagina.html" class="boton">Volver al Inicio</a>     
     <br>
@@ -139,24 +95,44 @@ height: 100vh
  </div>
 
 <script>
-function mostrarInfo(id) {
-    // Ocultar todos los contenidos
-    var contenidos = document.getElementsByClassName('info-contenido');
-    for (var i = 0; i < contenidos.length; i++) {
-        contenidos[i].classList.remove('mostrar');
+const informacion = {
+    marihuana: {
+        titulo: "Marihuana",
+        texto: "La marihuana es una droga derivada de la planta Cannabis sativa. Sus efectos incluyen alteración de la percepción, euforia, relajación y deterioro de la memoria a corto plazo. El consumo prolongado puede afectar el aprendizaje, la memoria y la salud mental."
+    },
+    cocaina: {
+        titulo: "Cocaína",
+        texto: "La cocaína es un estimulante potente del sistema nervioso central. Produce euforia intensa, aumento de energía y alerta. Sus riesgos incluyen adicción rápida, problemas cardíacos, derrames cerebrales y daño psicológico severo."
+    },
+    alcohol: {
+        titulo: "Alcohol",
+        texto: "El alcohol es una sustancia depresora del sistema nervioso central. Su consumo excesivo puede causar daño hepático, problemas cardiovasculares, deterioro cognitivo y dependencia. Es una de las drogas más consumidas y con mayores consecuencias sociales."
+    },
+    tabaco: {
+        titulo: "Tabaco",
+        texto: "El tabaco contiene nicotina, una sustancia altamente adictiva. El consumo de tabaco es la principal causa prevenible de enfermedades como cáncer de pulmón, enfermedades cardíacas y respiratorias. La nicotina crea dependencia física y psicológica."
+    },
+    prevencion: {
+        titulo: "Prevención",
+        texto: "La prevención efectiva incluye: educación temprana sobre los riesgos, comunicación abierta en familia, desarrollo de habilidades sociales, fomento de actividades saludables, y acceso a programas de apoyo. La detección temprana y la intervención son clave."
     }
+};
+
+function mostrarInfo() {
+    const selector = document.getElementById('selector');
+    const infoContainer = document.getElementById('info-container');
+    const infoTitulo = document.getElementById('info-titulo');
+    const infoTexto = document.getElementById('info-texto');
     
-    // Quitar clase active de todos los botones
-    var botones = document.getElementsByClassName('opcion-btn');
-    for (var i = 0; i < botones.length; i++) {
-        botones[i].classList.remove('active');
+    const seleccion = selector.value;
+    
+    if (seleccion && informacion[seleccion]) {
+        infoContainer.style.display = 'block';
+        infoTitulo.textContent = informacion[seleccion].titulo;
+        infoTexto.textContent = informacion[seleccion].texto;
+    } else {
+        infoContainer.style.display = 'none';
     }
-    
-    // Mostrar el contenido seleccionado
-    document.getElementById(id).classList.add('mostrar');
-    
-    // Agregar clase active al botón clickeado
-    event.target.classList.add('active');
 }
 </script>
 
